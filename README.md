@@ -2,7 +2,7 @@
 
 A reusable Codex skill for document-driven collaboration, curated project memory, bounded development increments, and optional contracted subagents. It supports new and existing projects without imposing a technology stack or requiring multiple agents.
 
-The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The initial version is **0.1.0**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
+The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The current version is **0.1.1**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
 
 ## What it provides
 
@@ -89,6 +89,8 @@ Adoption creates only useful records and maps their ownership. It can initialize
 > Use $manage-ai-assisted-projects to adopt this workflow in the current repository. Inspect existing instructions, documentation, issue/spec conventions, Git state, architecture, and verification commands. Preserve current work and map the workflow onto existing records. Add only missing continuity, contract, and assumption-handling mechanisms. Do not reorganize the project, implement features, or resolve product choices implicitly.
 
 The skill adapts to existing ADRs, issues, and documentation; it does not require a second source of truth or retroactive claims about past agreement.
+
+An existing `AGENTS.md` is preserved and supplemented with only missing, compatible workflow guidance. The [adoption procedure](skills/manage-ai-assisted-projects/references/adoption.md#preserve-and-supplement-agentsmd) requires targeted additive edits, preservation of local/uncommitted instructions, conflict reporting, and a before/after check. Repeated adoption avoids duplicate sections and preserves project adaptations; if nothing is missing, the file stays unchanged. This safeguard is executed by the agent following the skill; the package installer does not edit project `AGENTS.md` files.
 
 ## Everyday work
 

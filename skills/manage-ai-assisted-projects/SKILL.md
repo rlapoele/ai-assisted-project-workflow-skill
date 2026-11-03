@@ -9,7 +9,7 @@ Document-driven collaboration and curated repository memory are the foundation. 
 
 ## Choose the requested mode
 
-- **Adopt or upgrade:** read [adoption](references/adoption.md). Inspect before writing; map onto existing conventions. Use only needed [templates](assets/templates/). Setup does not open an increment or authorize product implementation.
+- **Adopt or upgrade:** read [adoption](references/adoption.md), including its AGENTS preservation procedure. Inspect before writing; map onto existing conventions. Never overwrite an existing `AGENTS.md` with a template; supplement only missing, compatible guidance. Use only needed [templates](assets/templates/). Setup does not open an increment or authorize product implementation.
 - **Resume or maintain continuity:** read [project memory](references/project-memory.md). Verify actual state, follow owning documents, and update only records affected by authorized work.
 - **Prepare or execute an increment:** use the cycle below and project-adapted contract/report templates. Read [agent assignments](references/agent-assignments.md) when allocating roles, delegation, or critique is needed.
 - **Critique or coordinate subagents:** read [agent assignments](references/agent-assignments.md). Critique is an assignment with a contract, not a compulsory permanent role.

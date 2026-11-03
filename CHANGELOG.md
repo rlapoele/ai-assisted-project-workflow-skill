@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1 — 2026-11-03
+
+- Clarify AGENTS preservation across adoption, maintenance, and upgrades: supplement existing instructions through targeted additive edits, preserve local changes and scoped files, avoid duplicates, and surface conflicts without overriding rules.
+- Require comparison with pre-edit content and leave fully covered files unchanged. Existing project agreements are not automatically migrated.
+
 ## 0.1.0 — 2026-11-03
 
 - Establish document-driven collaboration, curated repository memory, and new/existing project adoption.

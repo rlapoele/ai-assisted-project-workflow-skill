@@ -1,6 +1,6 @@
 ## Document-driven collaboration
 
-Adapt into existing instructions, replace the source map with real paths, and remove this introductory sentence.
+Template usage: follow the AGENTS preservation procedure in `references/adoption.md` within the skill package. This is a section to merge, not a replacement file. Preserve existing instructions; add only missing, compatible guidance without duplicating existing coverage. Replace the source map with real paths and remove this usage paragraph from the project output.
 
 - Preserve user scope and existing authorization. Distinguish evidence, proposals, agreements and unknowns; resolve conflicting sources explicitly.
 - Source map: [intent], [architecture/constraints], [decisions], [questions], [current status], [collaboration/roles], [increments or issues].

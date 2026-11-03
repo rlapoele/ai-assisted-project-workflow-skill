@@ -21,9 +21,22 @@ Read applicable instructions; inspect Git roots, branch/history, tracked/untrack
 1. Inventory existing instructions, authoritative product/technical documents, issues, decisions, tests, active work, and handoffs.
 2. Map framework responsibilities onto those records. Existing issues may own increments; existing ADRs may own decisions. Reference external records with access limits explicit.
 3. Separate observed implementation, documented intent, and uncertain historical rationale. Never infer past agreement from code or rewrite history to imply this process was followed.
-4. Add only missing mechanisms. Merge a bounded AGENTS section without replacing unrelated rules. Adoption is not permission to reorganize the repository or alter runtime code.
+4. Add only missing mechanisms. Follow the AGENTS preservation procedure below. Adoption is not permission to reorganize the repository or alter runtime code.
 5. Surface material undocumented assumptions relevant to near-term work: basis, consequence, resolution timing. Do not block adoption on a full audit; unknowns can remain unknown.
 6. Establish a compact current handoff grounded in inspected evidence. Propose a bounded pilot; execute only if authorized. Verify documentation changes and report limits.
+
+## Preserve and supplement AGENTS.md
+
+Apply this procedure during adoption, maintenance, and upgrades, including a nominally new project that already contains instructions.
+
+1. Read the complete existing target `AGENTS.md` and applicable parent and scoped instructions before editing. Keep changes in the requested scope; do not consolidate or replace nested instruction files.
+2. If the target file is absent, create it from the adapted [AGENTS section](../assets/templates/agents-section.md). If present, preserve its existing text, ordering, and project-specific rules. Never copy the template over it, truncate it, or regenerate the whole file. Use a targeted additive edit; preserve uncommitted edits too.
+3. Compare the template's responsibilities with existing guidance by meaning. Reuse existing sections and links where they already cover a responsibility. Add only missing, compatible guidance, normally in a bounded `Document-driven collaboration` section. Do not duplicate equivalent rules or append a second workflow section on repeated adoption.
+4. If proposed guidance conflicts with existing instructions, leave those instructions intact. Report the conflict and seek resolution only for dependent changes; continue compatible additions within authority. Appending a contradictory rule is not a safe merge. Replacing or removing an existing rule requires explicit authority for that change; invoking adoption or updating the skill alone does not provide it.
+5. On subsequent runs, inspect the current project wording again. Supplement omissions without resetting locally adapted guidance to the latest template. Changes to agreed workflow semantics require a separate migration assessment.
+6. Compare against the pre-edit content, including any uncommitted content rather than only Git HEAD. Confirm existing text remains intact, additions are compatible and nonduplicated, links resolve, and nested instructions are unchanged unless separately in scope. Report what was added, already covered, or left unresolved. If nothing is missing, leave the file unchanged.
+
+This is an agent-executed merge procedure. The package installer does not create or merge project instruction files.
 
 ## Suggested map, only where needed
 
