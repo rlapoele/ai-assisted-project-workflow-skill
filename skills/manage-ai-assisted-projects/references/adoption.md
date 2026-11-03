@@ -10,7 +10,7 @@ Read applicable instructions; inspect Git roots, branch/history, tracked/untrack
 
 1. Preserve or clarify purpose, users, intended outcomes, exclusions, and unknowns. Do not fabricate requirements to fill templates.
 2. Detect an enclosing Git repository. If genuinely absent, initialize Git locally as part of authorized adoption; do not create a nested repository unintentionally. Preserve existing branch policy.
-3. Establish ignore rules based on actual files/tooling before staging generated output or local configuration. Do not blindly copy stack exclusions or hide authored records. Git initialization does not authorize committing, remote creation, visibility selection, publication, or pushing unless the request includes them.
+3. Establish ignore rules based on actual files/tooling so the human reviewer can stage appropriate files later. Do not blindly copy stack exclusions or hide authored records. Leave staging and committing to the human reviewer. Git initialization does not authorize remote creation, visibility selection, publication, or pushing unless the request includes them.
 4. Establish minimal README, AGENTS working instructions, project context, compact status, and collaboration guidance. Record verified development commands; leave unestablished tooling explicit rather than choosing a stack.
 5. Supply increment/report and subagent-contract templates. Add decision/question records as actual content warrants them, avoiding empty mandatory taxonomies.
 6. Establish memory ownership, resume instructions, and an accurate status such as “workflow adopted; discovery pending.”
@@ -73,6 +73,8 @@ Establish explicitly:
 ## Verification and handoff
 
 Review changed/new files, local links, scope, consistency, and appropriate whitespace checks. Confirm no unintended runtime, dependency, ignore-rule, or user-work changes. Verify that project-local records alone explain resumption, authority, delegation contracts, assumption handling, and completion without access to this installed skill. Documentation adoption normally needs no application tests.
+
+Ensure project-local instructions carry the human staging/commit boundary from the AGENTS template, subject to the preservation and conflict procedure above. Return the change summary, verification results/limits, and suggested focused commit message without automatically staging or committing adoption changes.
 
 Example invocations:
 

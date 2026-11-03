@@ -2,7 +2,7 @@
 
 A reusable Codex skill for document-driven collaboration, curated project memory, bounded development increments, and optional contracted subagents. It supports new and existing projects without imposing a technology stack or requiring multiple agents.
 
-The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The current version is **0.1.1**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
+The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The current version is **0.2.0**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
 
 ## What it provides
 
@@ -94,6 +94,8 @@ An existing `AGENTS.md` is preserved and supplemented with only missing, compati
 
 ## Everyday work
 
+After any agent or subagent task that creates, edits, deletes, moves, or renames files or folders, staging and committing belong to the human reviewer. Agents return a change summary, verification results/limits, and a suggested focused commit message; they do not automatically run `git add`, `git commit`, or equivalent operations. Existing staged changes remain intact. This boundary also applies to coordinators handling subagent results and to workflow adoption itself.
+
 ### Resume and prepare an increment
 
 > Use $manage-ai-assisted-projects to resume from the project handoff, verify current state, and prepare the next bounded increment contract. Surface consequential assumptions and unresolved decisions. Do not implement yet.
@@ -133,7 +135,7 @@ Keep the project checkout on `dev` for normal Codex work. The local repository r
 1. Edit the tracked skill source and affected documentation together.
 2. Update VERSION and the changelog for a versioned change. Use patch for corrections, minor for compatible additions, and major for breaking changes to the adopted workflow or migration expectations. Before 1.0, document incompatible changes explicitly rather than relying on a version number alone.
 3. Run the checks below. For meaningful workflow changes, exercise a disposable new and existing project and use independent critique when useful.
-4. Commit a focused change. Tag, publish, push, or create releases only when requested. No remote hosting or license is selected by this local setup.
+4. Hand off a focused change with verification results and a suggested commit message; leave staging and committing to the human reviewer. Tag, publish, push, or create releases only when requested. No remote hosting or license is selected by this local setup.
 5. Re-run the installer to update a copied installation; existing adopted projects need a separate, explicit migration assessment. A development link already follows source changes.
 
 ```sh

@@ -8,6 +8,8 @@ The human owns product direction and consequential decisions. The coordinator pr
 
 Every spawned assignment, including exploration and critique, needs a [subagent contract](../assets/templates/subagent-contract.md). Small contracts can be inline dispatches; persist summaries when needed for continuity, not every exchange.
 
+Every assignment that may change files must carry the human-review boundary: agents and subagents leave staging and committing to the human reviewer, with no automatic `git add`, `git commit`, or equivalent operations. Coordinators do not stage or commit returned subagent work automatically either. Preserve existing staged changes and return a change summary, verification results/limits, and a suggested focused commit message.
+
 ## Dispatch and return
 
 1. State outcome, authoritative inputs, scope/authority, writable ownership, constraints, deliverables, acceptance/evidence, and escalation. Link the increment agreement when applicable. Delegation cannot expand user authority or override constraints.

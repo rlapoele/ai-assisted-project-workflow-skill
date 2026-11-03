@@ -30,6 +30,8 @@ Routine reversible choices need no global register. Investigation establishes fa
 
 Connect criterion IDs to concrete checks and observations. Record findings, dispositions, rechecks, and limits. Identify a stable reviewed snapshot, including new/untracked files, or use an isolated copy/worktree. Prefer a commit reference where available; extensive hash manifests are not the default.
 
+Use an existing commit reference when suitable; do not stage or create a commit automatically to identify a snapshot. For uncommitted work, record the baseline and reviewed working-tree scope, including new and deleted paths. Leave staging and committing to the human reviewer and preserve pre-existing staged changes.
+
 For product/interface work, add a learning question when useful: what should the user understand/accomplish, and what did observation show? Technical acceptance does not by itself validate a product hypothesis or establish accessibility conformance.
 
 Adopted records must be self-contained and use real project-relative links. Do not copy example-project semantics into another project.

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 — 2026-11-03
+
+- Leave staging and committing to the human reviewer after file/folder changes by any agent, subagent, or coordinator; preserve existing staged changes.
+- Carry the boundary through adoption, project instructions, delegation contracts, review snapshots, and completion handoffs, with verification results and a suggested commit message.
+- Existing adopted projects retain their agreements; assess migration explicitly rather than silently changing their Git policy.
+
 ## 0.1.1 — 2026-11-03
 
 - Clarify AGENTS preservation across adoption, maintenance, and upgrades: supplement existing instructions through targeted additive edits, preserve local changes and scoped files, avoid duplicates, and surface conflicts without overriding rules.

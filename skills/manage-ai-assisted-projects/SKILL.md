@@ -16,6 +16,12 @@ Document-driven collaboration and curated repository memory are the foundation. 
 
 Explanation or drafting requests do not authorize project edits. Preserve the requested phase and existing user authority; drafts, critique, and adoption are not implementation permission.
 
+## Human review before staging and committing
+
+Whenever an agent or subagent completes a task that creates, edits, deletes, moves, or renames files or folders, leave the changes for a human reviewer to stage and commit. Do not automatically run `git add`, `git commit`, or equivalent staging/commit operations through tools or scripts. Task completion, passing checks, and agent review do not authorize these operations. Preserve any pre-existing staged changes; do not unstage them to enforce this rule.
+
+Hand off a concise change summary, verification results and limits, and a suggested focused commit message. Include this boundary in every delegated assignment that may change files. A stable review snapshot can be identified without creating a commit.
+
 ## Development cycle
 
 1. Establish intended user/operational outcomes. Explore alternatives when unsettled; distinguish prototype behavior from agreed implementation.

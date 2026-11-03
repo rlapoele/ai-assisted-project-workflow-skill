@@ -6,6 +6,7 @@ This repository owns the reusable `manage-ai-assisted-projects` skill, not an ap
 - Maintain source under `skills/manage-ai-assisted-projects/`; do not edit personal installed copies as source or include personal paths, project transcripts, or target-project semantics.
 - Preserve document-driven collaboration and curated project memory as the foundation. Separate agents remain optional and proportionate. Contract every delegated assignment, including critique, and preserve explicit uncertainty handling and authorization boundaries.
 - Preserve existing changes; inspect Git before editing. Keep adoption safe for new and existing projects without inventing past agreement or selecting stacks.
+- After agent or subagent tasks that create, edit, delete, move, or rename files or folders, leave staging and committing to the human reviewer. Do not automatically run `git add`, `git commit`, or equivalent operations; preserve pre-existing staged changes and carry this boundary into delegated assignments.
 - Update README and affected references/templates when behavior changes. An update to this skill does not automatically migrate agreements in projects using it.
 - Verify local links, `git diff --check`, and installer tests when relevant. Use the skill-creator validator when available. For material workflow changes, forward-test in isolated new/existing fixtures and consider independent critique.
 - Installation/update operations must preserve an existing installation unless replacement is explicitly requested. Keep backups outside skills discovery locations.

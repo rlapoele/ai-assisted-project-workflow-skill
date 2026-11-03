@@ -22,3 +22,7 @@
 ### Limits and next action
 
 [Unmet criteria, limitations, next authorized action or proposed follow-up; don't infer new feature/publication authority.]
+
+### Human Git handoff
+
+[For file/folder changes: summarize created, edited, deleted, moved, or renamed paths and suggest a focused commit message. Leave staging and committing to the human reviewer; preserve pre-existing staged changes.]
