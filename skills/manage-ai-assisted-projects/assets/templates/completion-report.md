@@ -25,4 +25,4 @@
 
 ### Human Git handoff
 
-[For file/folder changes: summarize created, edited, deleted, moved, or renamed paths and suggest a focused commit message. Leave staging and committing to the human reviewer; preserve pre-existing staged changes.]
+[For file/folder changes: summarize created, edited, deleted, moved, or renamed paths. Present a ready-to-copy suggested focused commit message here and in the user-facing completion response before handing back for human git add, git commit, and optional git push. Follow project commit conventions; suggest a message per proposed commit when appropriate. Leave staging, committing, and optional pushing to the human reviewer; preserve pre-existing staged changes.]

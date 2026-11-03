@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 — 2026-11-03
+
+- Require a ready-to-copy commit message in the user-facing completion response before handoff for human staging, committing, and optional pushing; coordinators relay or adapt subagent suggestions and follow project commit conventions.
+
 ## 0.2.0 — 2026-11-03
 
 - Leave staging and committing to the human reviewer after file/folder changes by any agent, subagent, or coordinator; preserve existing staged changes.

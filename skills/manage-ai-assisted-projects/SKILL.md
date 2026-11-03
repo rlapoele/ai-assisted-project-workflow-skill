@@ -20,7 +20,7 @@ Explanation or drafting requests do not authorize project edits. Preserve the re
 
 Whenever an agent or subagent completes a task that creates, edits, deletes, moves, or renames files or folders, leave the changes for a human reviewer to stage and commit. Do not automatically run `git add`, `git commit`, or equivalent staging/commit operations through tools or scripts. Task completion, passing checks, and agent review do not authorize these operations. Preserve any pre-existing staged changes; do not unstage them to enforce this rule.
 
-Hand off a concise change summary, verification results and limits, and a suggested focused commit message. Include this boundary in every delegated assignment that may change files. A stable review snapshot can be identified without creating a commit.
+Before handing changes back for human `git add`, `git commit`, and optional `git push`, present a concise change summary, verification results and limits, and a ready-to-copy suggested focused commit message in the user-facing completion response. Follow the project's commit conventions. For separately reviewable changes, suggest a message per proposed commit. The coordinator must relay or adapt subagent suggestions to the user; an internal subagent return alone does not satisfy this handoff. Pushing remains optional and human-controlled; a suggested message does not authorize it. Include this boundary in every delegated assignment that may change files. A stable review snapshot can be identified without creating a commit.
 
 ## Development cycle
 

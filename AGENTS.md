@@ -11,3 +11,4 @@ This repository owns the reusable `manage-ai-assisted-projects` skill, not an ap
 - Verify local links, `git diff --check`, and installer tests when relevant. Use the skill-creator validator when available. For material workflow changes, forward-test in isolated new/existing fixtures and consider independent critique.
 - Installation/update operations must preserve an existing installation unless replacement is explicitly requested. Keep backups outside skills discovery locations.
 - Do not create remotes, choose visibility/license, tag, publish, or push without requested authority. Include a suggested focused commit message when handing off uncommitted changes.
+- Present that message ready to copy in the user-facing completion response before handing back for human `git add`, `git commit`, and optional `git push`; relay or adapt any subagent suggestions. Pushing remains optional and human-controlled.

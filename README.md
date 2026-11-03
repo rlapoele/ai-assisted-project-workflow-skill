@@ -2,7 +2,7 @@
 
 A reusable Codex skill for document-driven collaboration, curated project memory, bounded development increments, and optional contracted subagents. It supports new and existing projects without imposing a technology stack or requiring multiple agents.
 
-The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The current version is **0.2.0**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
+The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The current version is **0.2.1**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
 
 ## What it provides
 
@@ -95,6 +95,8 @@ An existing `AGENTS.md` is preserved and supplemented with only missing, compati
 ## Everyday work
 
 After any agent or subagent task that creates, edits, deletes, moves, or renames files or folders, staging and committing belong to the human reviewer. Agents return a change summary, verification results/limits, and a suggested focused commit message; they do not automatically run `git add`, `git commit`, or equivalent operations. Existing staged changes remain intact. This boundary also applies to coordinators handling subagent results and to workflow adoption itself.
+
+The user-facing completion response must present a ready-to-copy commit message before handing changes back for human `git add`, `git commit`, and optional `git push`. Messages follow project conventions; separate proposed commits receive separate suggestions where appropriate. Coordinators relay or adapt subagent suggestions to the user. Pushing remains optional and human-controlled.
 
 ### Resume and prepare an increment
 
