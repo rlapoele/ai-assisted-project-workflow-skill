@@ -10,6 +10,22 @@ import shutil
 SKILL_NAME = "manage-ai-assisted-projects"
 
 
+def snapshot_link(destination, backup):
+    """Dereference contents without traversing cycles or our own backup tree."""
+    backup_dir = backup.parent
+
+    def check_directory(directory, names):
+        path = Path(directory)
+        resolved = path.resolve(strict=True)
+        if resolved == backup_dir or resolved in backup_dir.parents:
+            raise ValueError("Linked contents must not reach the backup directory")
+        if any(parent.resolve() == resolved for parent in path.parents):
+            raise ValueError("Linked contents must not contain directory cycles")
+        return ()  # Validate traversal, without excluding any backup contents.
+
+    shutil.copytree(destination, backup, ignore=check_directory)
+
+
 def install(source, skills_dir, *, replace=False, link=False):
     source = Path(source).resolve()
     skills_dir = Path(skills_dir).expanduser().resolve()
@@ -28,19 +44,32 @@ def install(source, skills_dir, *, replace=False, link=False):
         raise FileExistsError(f"{destination} already exists; use --replace to back it up")
     backup = None
     original_link = destination.readlink() if destination.is_symlink() else None
-    original_link_destination = destination.resolve() if original_link is not None else None
     skills_dir.mkdir(parents=True, exist_ok=True)
     if exists:
-        backup_dir = skills_dir.parent / (skills_dir.name + "-backups")
+        backup_dir = (skills_dir.parent / (skills_dir.name + "-backups")).resolve()
+        if backup_dir == skills_dir or skills_dir in backup_dir.parents:
+            raise ValueError("Backup directory must be outside the skills directory")
+        if original_link is not None:
+            original_target = destination.resolve(strict=True)
+            if original_target == backup_dir or original_target in backup_dir.parents:
+                raise ValueError("Backup directory must be outside the linked installation target")
         backup_dir.mkdir(parents=True, exist_ok=True)
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
         backup = backup_dir / f"{SKILL_NAME}-{stamp}"
-        destination.rename(backup)
+        if original_link is not None:
+            # Freeze linked contents before touching the installation. Follow nested
+            # links too so later target edits/deletions cannot change this snapshot.
+            try:
+                snapshot_link(destination, backup)
+            except Exception:
+                if backup.exists():
+                    shutil.rmtree(backup)
+                raise
+        else:
+            destination.rename(backup)
     try:
-        if backup is not None and original_link is not None:
-            # A relative symlink must keep pointing at the original target after moving.
-            backup.unlink()
-            backup.symlink_to(original_link_destination, target_is_directory=True)
+        if original_link is not None:
+            destination.unlink()
         if link:
             destination.symlink_to(source, target_is_directory=True)
         else:
@@ -53,8 +82,7 @@ def install(source, skills_dir, *, replace=False, link=False):
             shutil.rmtree(destination)
         if backup is not None:
             if original_link is not None:
-                if backup.is_symlink():
-                    backup.unlink()
+                # Keep the content snapshot as well as restoring the original link.
                 destination.symlink_to(original_link, target_is_directory=True)
             else:
                 backup.rename(destination)

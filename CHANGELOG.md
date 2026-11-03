@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0 — 2026-11-03
+
+- Add confidentiality, context minimization, and untrusted-content boundaries to the workflow, adoption, project memory, and delegated assignments.
+- Snapshot development-symlink installation contents before replacement so backups survive target edits/deletion; preserve the original link if snapshotting fails and restore it after replacement failures.
+- Add disposable new/existing/repeat-adoption behavioral evaluations, observable safety checks, and regression tests for the checker and installer.
+- Existing adopted agreements require a separate migration assessment; these instructions do not provide technical isolation or promote a release automatically.
+
 ## 0.2.2 — 2026-11-03
 
 - Direct user installation and updates to the `releases` branch, with explicit Codex and local clone examples; reserve `dev` and development links for development/testing.

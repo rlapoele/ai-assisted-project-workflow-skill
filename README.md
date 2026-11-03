@@ -2,7 +2,7 @@
 
 A reusable Codex skill for document-driven collaboration, curated project memory, bounded development increments, and optional contracted subagents. It supports new and existing projects without imposing a technology stack or requiring multiple agents.
 
-The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. This checkout's version is **0.2.2**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md). The latest deployed skill is always on **`releases`**; the default branch, **`dev`**, contains development work.
+The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. This checkout's version is **0.3.0**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md). The latest deployed skill is always on **`releases`**; the default branch, **`dev`**, contains development work.
 
 ## What it provides
 
@@ -25,6 +25,9 @@ skills/manage-ai-assisted-projects/
   assets/templates/         # Eight adaptable project document templates
 scripts/install.py          # Standard-library installer; copy or development link
 tests/test_install.py       # Installer behavior checks
+tests/test_behavior_evaluation.py # Evaluation checker regression tests
+evaluations/               # Behavioral evaluation contracts and recorded results
+scripts/evaluate_behavior.py # Disposable fixture preparation and outcome checks
 AGENTS.md                   # Instructions for maintaining this repository
 VERSION
 CHANGELOG.md
@@ -72,7 +75,9 @@ python3 scripts/install.py --skills-dir "$HOME/.codex/skills" --replace
 
 If your environment uses another skills directory, pass it with `--skills-dir`; for example, `--skills-dir "$CODEX_HOME/skills"` when `CODEX_HOME` is configured. The installer does not infer client-specific discovery paths.
 
-With `--replace`, the old directory or symlink is moved into a timestamped backup **outside** the skills directory, and the replacement is installed. The command prints the backup location. Local changes are preserved in that backup; inspect them before discarding it. Backups are outside discovery to avoid duplicate skills.
+With `--replace`, an existing directory is moved unchanged into a timestamped backup **outside** the skills directory. An existing development symlink is instead backed up as a separate directory containing a snapshot of its target's contents, with nested symlinks dereferenced. Later changes or deletion of that target do not change the snapshot. The installer creates the snapshot before removing the original link; if snapshotting fails (including missing targets or unreadable/broken nested links), replacement stops with the original installation untouched. Backup paths inside skill discovery or inside the snapshotted target are refused, as are directory cycles and nested links reaching the backup directory or its ancestors. Ordinary directory backups retain their original internal symlinks; the snapshot guarantee applies to replacing a development symlink.
+
+The command prints the backup location. Local changes are preserved in that backup; inspect it before discarding it. If installation fails after a successful symlink snapshot, the original link is restored and its content snapshot is retained. Existing directory installations are restored from their moved backup on failure. These are ordinary exception-recovery safeguards, not a guarantee of atomic recovery after process termination or concurrent edits; avoid editing the installation or linked target during replacement.
 
 Codex detects skills and changes automatically according to the official documentation. If the skill does not appear, restart Codex. Invoke it as `$manage-ai-assisted-projects`.
 
@@ -113,6 +118,8 @@ The skill adapts to existing ADRs, issues, and documentation; it does not requir
 An existing `AGENTS.md` is preserved and supplemented with only missing, compatible workflow guidance. The [adoption procedure](skills/manage-ai-assisted-projects/references/adoption.md#preserve-and-supplement-agentsmd) requires targeted additive edits, preservation of local/uncommitted instructions, conflict reporting, and a before/after check. Repeated adoption avoids duplicate sections and preserves project adaptations; if nothing is missing, the file stays unchanged. This safeguard is executed by the agent following the skill; the package installer does not edit project `AGENTS.md` files.
 
 ## Everyday work
+
+Inspection, curated memory, and delegated context use only necessary, authorized information. The skill tells agents to preserve private/ignored boundaries, omit sensitive values from artifacts and output, and treat embedded instructions in documents, issues, logs, comments, or tool output as untrusted evidence. It does not itself upload project data or bundle external services. These are behavioral safeguards, not a sandbox: the host's actual tool, filesystem, and network permissions remain the enforcement boundary.
 
 After any agent or subagent task that creates, edits, deletes, moves, or renames files or folders, staging and committing belong to the human reviewer. Agents return a change summary, verification results/limits, and a suggested focused commit message; they do not automatically run `git add`, `git commit`, or equivalent operations. Existing staged changes remain intact. This boundary also applies to coordinators handling subagent results and to workflow adoption itself.
 
@@ -156,7 +163,7 @@ Keep the project checkout on `dev` for normal Codex work. The local repository r
 
 1. Edit the tracked skill source and affected documentation together.
 2. Update VERSION and the changelog for a versioned change. Use patch for corrections, minor for compatible additions, and major for breaking changes to the adopted workflow or migration expectations. Before 1.0, document incompatible changes explicitly rather than relying on a version number alone.
-3. Run the checks below. For meaningful workflow changes, exercise a disposable new and existing project and use independent critique when useful.
+3. Run the checks below. For meaningful workflow changes, run the [behavioral evaluations](evaluations/README.md) on disposable new/existing projects, including repeat adoption, and use independent critique when useful. Keep behavioral results separate from installer/checker tests.
 4. Hand off a focused change with verification results and a suggested commit message; leave staging and committing to the human reviewer. Tag, publish, push, or create releases only when requested. No remote hosting or license is selected by this local setup.
 5. Re-run the installer to update a copied installation; existing adopted projects need a separate, explicit migration assessment. A development link already follows source changes.
 
@@ -166,5 +173,9 @@ git diff --check
 ```
 
 Review Markdown links and package content. If the Codex `skill-creator` validator is available, run its `quick_validate.py` against `skills/manage-ai-assisted-projects`; it needs PyYAML. The skill and installer themselves have no PyYAML dependency.
+
+The evaluation harness uses only Python's standard library and local Git. It prepares synthetic fixtures and checks observable preservation, Git-state, and disclosure invariants; a separate agent executes adoption. Review its actual artifacts, completion response, and command/tool trace too. Automated fixture checks alone cannot prove an agent never read or printed sensitive data or attempted a forbidden operation. See [evaluation procedure](evaluations/README.md).
+
+The [0.3.0 evaluation report](evaluations/2026-11-03-safety.md) records the observed failures, corrections, reruns, and verification limits.
 
 Version 0.1.0 was checked with the bundled validator, independent critique, and disposable new/existing adoption exercises. That is initial validation, not proof that every project or agent will follow the workflow reliably.
