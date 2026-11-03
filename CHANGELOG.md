@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Expand the README's new-project and existing-project examples into ready-to-copy adoption prompts covering preservation, confidentiality, scope, verification, and human Git handoff.
+
 ## 0.3.0 — 2026-11-03
 
 - Add confidentiality, context minimization, and untrusted-content boundaries to the workflow, adoption, project memory, and delegated assignments.
