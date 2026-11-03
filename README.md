@@ -118,6 +118,14 @@ See the [skill entry point](skills/manage-ai-assisted-projects/SKILL.md), [adopt
 
 Installed instructions guide adoption; the adopted project's records must remain understandable without this skill. Keep current status short, preserve decisions in owning documents, and recheck historical claims against current code/Git when relevant. Evolving skill instructions do not silently amend previously agreed project contracts.
 
+## Branch policy
+
+- **`dev`** is the default branch and the normal working branch for this repository and its Codex project.
+- **`releases`** holds explicitly promoted stable versions for distribution/deployment. Advance it from a reviewed version of `dev` only when a release promotion is requested.
+- **`main`** is a backup branch, not the normal development or release target. Advance it only when a backup update is requested.
+
+Keep the project checkout on `dev` for normal Codex work. The local repository records `init.defaultBranch=dev`; that setting is local configuration, not a tracked or hosted default-branch setting. If a remote host is configured later, set its repository default branch to `dev` too. Creating these branches does not configure deployment automation.
+
 ## Maintain and version
 
 1. Edit the tracked skill source and affected documentation together.
