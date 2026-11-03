@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI-Assisted Project Workflow"
+  short_description: "Document-driven projects with curated memory"
+  default_prompt: "Use $manage-ai-assisted-projects to adopt a lightweight document-driven workflow in this project, with curated memory and optional contracted subagents."
