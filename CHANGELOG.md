@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 — 2026-11-03
+
+- Direct user installation and updates to the `releases` branch, with explicit Codex and local clone examples; reserve `dev` and development links for development/testing.
+
 ## 0.2.1 — 2026-11-03
 
 - Require a ready-to-copy commit message in the user-facing completion response before handoff for human staging, committing, and optional pushing; coordinators relay or adapt subagent suggestions and follow project commit conventions.

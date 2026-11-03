@@ -2,7 +2,7 @@
 
 A reusable Codex skill for document-driven collaboration, curated project memory, bounded development increments, and optional contracted subagents. It supports new and existing projects without imposing a technology stack or requiring multiple agents.
 
-The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. The current version is **0.2.1**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md).
+The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. This checkout's version is **0.2.2**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md). The latest deployed skill is always on **`releases`**; the default branch, **`dev`**, contains development work.
 
 ## What it provides
 
@@ -32,11 +32,31 @@ CHANGELOG.md
 
 The tracked `skills/` directory is the source of truth. An installed copy is a distribution, not the place to maintain the source. Changes to this repository do not update copies automatically. A development link follows changes immediately.
 
+## Install from Codex
+
+Ask Codex to install the deployed skill from `releases` explicitly:
+
+```text
+$skill-installer Install manage-ai-assisted-projects from:
+https://github.com/rlapoele/ai-assisted-project-workflow-skill/tree/releases/skills/manage-ai-assisted-projects
+```
+
+The repository must be accessible to the user. For updates, keep using `releases` and request a backup before replacing an existing installation. The repository's installer below provides that backup behavior. Use `dev` only when deliberately testing development work; do not rely on the repository's default branch for user installation.
+
 ## Install locally
 
 Requirements: Python 3.9 or newer and a local checkout of this repository. The installer needs no third-party packages or network access.
 
-Run from this repository root:
+For a user installation, clone the deployed branch explicitly:
+
+```sh
+git clone --branch releases --single-branch https://github.com/rlapoele/ai-assisted-project-workflow-skill.git
+cd ai-assisted-project-workflow-skill
+```
+
+For subsequent updates, run `git pull --ff-only` in that separate `releases` checkout before reinstalling. Preserve local work and resolve any pull failure rather than resetting it. Keep the maintenance checkout on `dev`.
+
+Run from the `releases` checkout root:
 
 ```sh
 python3 scripts/install.py
@@ -58,7 +78,7 @@ Codex detects skills and changes automatically according to the official documen
 
 ### Development link
 
-To have Codex use the tracked source directly:
+For development only, to have Codex use the tracked source in a `dev` checkout directly:
 
 ```sh
 python3 scripts/install.py --link --skills-dir "$HOME/.codex/skills" --replace
@@ -68,7 +88,7 @@ Use a discovery directory appropriate to your client. Symlinked skill folders ar
 
 ### Project-scoped installation
 
-For a shared repository-specific installation:
+For a shared repository-specific installation, run from the `releases` checkout:
 
 ```sh
 python3 scripts/install.py --skills-dir /path/to/project/.agents/skills
@@ -127,7 +147,7 @@ Installed instructions guide adoption; the adopted project's records must remain
 ## Branch policy
 
 - **`dev`** is the default branch and the normal working branch for this repository and its Codex project.
-- **`releases`** holds explicitly promoted stable versions for distribution/deployment. Advance it from a reviewed version of `dev` only when a release promotion is requested.
+- **`releases`** holds the latest deployed skill and is the source for user installation, pulls, and updates. Advance it from a reviewed version of `dev` only when a release promotion is requested.
 - **`main`** is a backup branch, not the normal development or release target. Advance it only when a backup update is requested.
 
 Keep the project checkout on `dev` for normal Codex work. The local repository records `init.defaultBranch=dev`; that setting is local configuration, not a tracked or hosted default-branch setting. If a remote host is configured later, set its repository default branch to `dev` too. Creating these branches does not configure deployment automation.
