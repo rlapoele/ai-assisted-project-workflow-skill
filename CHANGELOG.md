@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Explain that adopted project instructions carry the workflow across tasks and chats without repeated skill invocation; distinguish installation, implicit activation, and optional explicit reuse.
 - Expand the README's new-project and existing-project examples into ready-to-copy adoption prompts covering preservation, confidentiality, scope, verification, and human Git handoff.
 
 ## 0.3.0 — 2026-11-03

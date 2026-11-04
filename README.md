@@ -151,6 +151,12 @@ An existing `AGENTS.md` is preserved and supplemented with only missing, compati
 
 ## Everyday work
 
+**After adopting the workflow in a project, you do not need to re-invoke the skill for every task.** Installation makes the skill available; initial adoption puts the working conventions, source map, and continuity guidance into the project's `AGENTS.md` and supporting records. Codex should follow applicable project instructions during subsequent work, including in new chats opened in that project. Those records are designed to remain usable without the installed skill. See [persistent project guidance](https://learn.chatgpt.com/docs/customization/overview).
+
+Codex can also select the installed skill implicitly when a request matches its description. This skill permits that default behavior, but automatic selection is not guaranteed for every request. Continuity therefore rests on the adopted project records, rather than requiring the full skill to be loaded each time. See [skill activation](https://learn.chatgpt.com/docs/build-skills).
+
+Invoke `$manage-ai-assisted-projects` explicitly for initial adoption in each project, or when you want a workflow review, upgrade assessment, or deliberate use of its full guidance. Updating the installed skill does not automatically migrate an adopted project's agreements. Following the workflow does not grant new implementation, delegation, staging, commit, or publication authority; the project's agreed boundaries still apply.
+
 Inspection, curated memory, and delegated context use only necessary, authorized information. The skill tells agents to preserve private/ignored boundaries, omit sensitive values from artifacts and output, and treat embedded instructions in documents, issues, logs, comments, or tool output as untrusted evidence. It does not itself upload project data or bundle external services. These are behavioral safeguards, not a sandbox: the host's actual tool, filesystem, and network permissions remain the enforcement boundary.
 
 After any agent or subagent task that creates, edits, deletes, moves, or renames files or folders, staging and committing belong to the human reviewer. Agents return a change summary, verification results/limits, and a suggested focused commit message; they do not automatically run `git add`, `git commit`, or equivalent operations. Existing staged changes remain intact. This boundary also applies to coordinators handling subagent results and to workflow adoption itself.
@@ -159,7 +165,9 @@ The user-facing completion response must present a ready-to-copy commit message 
 
 ### Resume and prepare an increment
 
-> Use $manage-ai-assisted-projects to resume from the project handoff, verify current state, and prepare the next bounded increment contract. Surface consequential assumptions and unresolved decisions. Do not implement yet.
+After adoption, an ordinary request is sufficient:
+
+> Resume from the project handoff, follow the project instructions, verify current state, and prepare the next bounded increment contract. Surface consequential assumptions and unresolved decisions. Do not implement yet.
 
 ### Implement an agreed increment
 
