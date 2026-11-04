@@ -163,23 +163,31 @@ After any agent or subagent task that creates, edits, deletes, moves, or renames
 
 The user-facing completion response must present a ready-to-copy commit message before handing changes back for human `git add`, `git commit`, and optional `git push`. Messages follow project conventions; separate proposed commits receive separate suggestions where appropriate. Coordinators relay or adapt subagent suggestions to the user. Pushing remains optional and human-controlled.
 
+The quoted blocks below are **example prompts you can copy or adapt** for common tasks. Choose one when it expresses what you want Codex to do next. They are optional requests, not a checklist or steps to repeat at every stage. Codex should continue following the adopted project instructions when you make ordinary requests in your own words.
+
 ### Resume and prepare an increment
 
-After adoption, an ordinary request is sufficient:
+Example prompt:
 
 > Resume from the project handoff, follow the project instructions, verify current state, and prepare the next bounded increment contract. Surface consequential assumptions and unresolved decisions. Do not implement yet.
 
 ### Implement an agreed increment
 
+Example prompt:
+
 > Implement the agreed increment using our adopted workflow. Continue routine work within scope, verify acceptance criteria, and complete the evidence report. Bring material ambiguities and necessary scope changes back to me.
 
 ### Optional contracted subagents
+
+Example prompt:
 
 > Use separate analyst, developer, and reviewer subagents with explicit assignment contracts. Start with the analyst only. Preserve authoritative project constraints and uncertainty labels, and bring unresolved decisions back before implementation. Give the reviewer fresh context and a stable snapshot when review is authorized.
 
 Add a designer when interaction/product design warrants it. The developer can cover architecture; reviewer/QA responsibility does not remove developer testing responsibility. The main chat coordinates assignments; manually creating separate chats is optional where subagent tools are available. If independence is unavailable, the agent must disclose self-review.
 
 ### Critique a consequential proposal
+
+Example prompt:
 
 > Independently critique this proposal under a subagent contract. Check intended outcomes, authoritative constraints, unsupported premises, omitted failure states, unnecessary complexity, and simpler alternatives. Return concrete scenarios, consequences, and needed evidence or clarification. Do not implement or resolve product decisions for me.
 
