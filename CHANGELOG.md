@@ -1,13 +1,13 @@
 # Changelog
 
-## Unreleased
+## 0.3.1 — 2026-11-04
 
 - Label everyday-work quotations as optional example prompts to copy or adapt, rather than steps users must repeat.
 - Explain that adopted project instructions carry the workflow across tasks and chats without repeated skill invocation; distinguish installation, implicit activation, and optional explicit reuse.
-- Expand the README's new-project and existing-project examples into ready-to-copy adoption prompts covering preservation, confidentiality, scope, verification, and human Git handoff.
 
 ## 0.3.0 — 2026-11-03
 
+- Expand the README's new-project and existing-project examples into ready-to-copy adoption prompts covering preservation, confidentiality, scope, verification, and human Git handoff.
 - Add confidentiality, context minimization, and untrusted-content boundaries to the workflow, adoption, project memory, and delegated assignments.
 - Snapshot development-symlink installation contents before replacement so backups survive target edits/deletion; preserve the original link if snapshotting fails and restore it after replacement failures.
 - Add disposable new/existing/repeat-adoption behavioral evaluations, observable safety checks, and regression tests for the checker and installer.

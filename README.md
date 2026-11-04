@@ -2,7 +2,7 @@
 
 A reusable Codex skill for document-driven collaboration, curated project memory, bounded development increments, and optional contracted subagents. It supports new and existing projects without imposing a technology stack or requiring multiple agents.
 
-The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. This checkout's version is **0.3.0**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md). The latest deployed skill is always on **`releases`**; the default branch, **`dev`**, contains development work.
+The repository name is `ai-assisted-project-workflow-skill`; the installed skill and invocation name are **`manage-ai-assisted-projects`**. This checkout's version is **0.3.1**; see [VERSION](VERSION) and [CHANGELOG.md](CHANGELOG.md). The latest deployed skill is always on **`releases`**; the default branch, **`dev`**, contains development work.
 
 ## What it provides
 
