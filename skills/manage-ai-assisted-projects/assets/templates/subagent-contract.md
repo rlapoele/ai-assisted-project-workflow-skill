@@ -10,6 +10,8 @@ Small assignments can use these fields inline. This contract inherits user autho
 
 [What may be inspected, edited, decided or delegated; writable ownership and exclusions. Independent review/critique must not change its target.]
 
+[For design assignments, distinguish assessment/proposal, permitted exploration artifacts, approved design scope, and implementation authority. Carry existing user feedback and decisions; do not treat an unsettled change request as approval of a solution. Omit when inapplicable.]
+
 For any file/folder changes, leave staging and committing to the human reviewer. Do not automatically run `git add`, `git commit`, or equivalent tool/script operations. Preserve pre-existing staged changes and carry this boundary into any authorized further delegation.
 
 ## Constraints and current uncertainty

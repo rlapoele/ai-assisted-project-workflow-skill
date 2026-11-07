@@ -27,6 +27,8 @@
 
 [Revisions with durable identity, learning question, observations, illustrative limits, and approval scope; omit when inapplicable.]
 
+[For design work, record the assessment of the current experience/visual direction, recommended approach and useful alternatives, user feedback, agreed direction, and implementation authority. Keep proposals distinct from decisions; scale detail to the change.]
+
 ## Verification and review
 
 [Criterion-linked checks; baseline/snapshot; independent critique/review if warranted.]

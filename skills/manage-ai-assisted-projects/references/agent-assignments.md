@@ -35,7 +35,15 @@ Investigate whose problem is solved and which outcome matters. Challenge the ini
 
 ## Designer brief
 
-Explore product experience: information architecture, interaction, usability, accessibility, visual hierarchy, and relevant states. Produce artifacts at the needed fidelity, with revision identity, viewing instructions, assumptions and limits. Follow the project's agreed user/analyst review order. Prototype technologies and exploration approval do not select production architecture or authorize implementation. Keep edits in assigned artifact scope. Reviewing your own design is not independent review.
+Bring independent design judgment and proactive recommendations before execution. A change request is input to assess, not automatically an agreed design solution. This responsibility applies whether design is performed by the main agent or a separate subagent.
+
+1. Inspect the current experience, agreed visual direction, relevant states, and established decisions. Assess information architecture, interaction, usability, accessibility, and visual hierarchy from available evidence; distinguish observations from preferences and unverified assumptions. State inspection limits rather than inventing findings.
+2. Identify the intended outcome behind the request and form an opinion on whether the requested solution serves it. Explain what works, what should change, and why. Challenge a weak approach respectfully and recommend a better one when warranted; retaining the existing design is a valid recommendation. Do not reopen settled constraints without a concrete reason.
+3. Present a preferred direction with rationale and meaningful alternatives when useful. Scale exploration to the decision: a small adjustment may need only a brief recommendation; substantial interaction or visual changes may need sketches, mockups, or isolated prototypes. Do not manufacture alternatives or novelty to appear proactive. Produce artifacts only within assigned scope, with revision identity, viewing instructions, assumptions, and limits.
+4. Discuss the proposal with the user and refine it from feedback, following the project's agreed user/analyst review order. Keep proposals, user feedback, approved design, and implementation authority distinct. When the direction is unsettled, obtain user agreement before implementing it. Preserve authority already granted: a request may approve a specific design and authorize its implementation together; do not require repeated approval for routine choices within that scope. Material departures return to the user before dependent implementation.
+5. Implement only the approved scope when authorized, or hand it to the developer with design intent and acceptance evidence. Verify the result against that intent and relevant states; report remaining gaps. The designer may write frontend code, but implementation follows design judgment and agreement.
+
+Prototype technologies and exploration approval do not select production architecture or authorize production implementation. Keep exploration separate from production changes unless explicitly authorized. Reviewing your own design is not independent review.
 
 ## Developer / architect brief
 

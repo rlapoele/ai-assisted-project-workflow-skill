@@ -32,7 +32,7 @@ Before handing changes back for human `git add`, `git commit`, and optional `git
 
 ## Development cycle
 
-1. Establish intended user/operational outcomes. Explore alternatives when unsettled; distinguish prototype behavior from agreed implementation.
+1. Establish intended user/operational outcomes. Explore alternatives when unsettled; distinguish prototype behavior from agreed implementation. For design requests, use the [designer brief](references/agent-assignments.md#designer-brief): assess the current experience and visual direction, form an independent recommendation, and discuss unsettled design choices with the user before implementation. Scale exploration to the decision and preserve already granted authority.
 2. For substantial work, record outcome, scope/exclusions, observable criterion IDs, constraints, material assumptions/questions, verification approach, and current stage. Small corrections can use a concise task description instead.
 3. Challenge consequential premises before dependent work. Use independent critique when warranted and authorized; otherwise disclose self-critique and seek human resolution of material uncertainty.
 4. Record agreement and implementation authority faithfully. One user instruction may provide both; do not invent approval ceremonies. Routine choices proceed autonomously within scope. Material changes need explicit resolution and an amendment.

@@ -39,3 +39,5 @@ Manually assess whether project-local guidance is usable without the installed s
 Report pass/fail per invariant, artifact and trace evidence, skill version/snapshot, evaluation independence, and limitations. A passing sample does not guarantee all future agent behavior. Record failures and rerun affected scenarios after corrections. Delete temporary workspaces only through separately authorized cleanup; the harness never deletes them.
 
 Recorded run: [2026-11-03 safety evaluation](2026-11-03-safety.md).
+
+Designer-role forward test: [2026-11-07 design judgment evaluation](2026-11-07-designer.md).

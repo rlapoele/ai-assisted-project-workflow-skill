@@ -185,6 +185,8 @@ Example prompt:
 
 Add a designer when interaction/product design warrants it. The developer can cover architecture; reviewer/QA responsibility does not remove developer testing responsibility. The main chat coordinates assignments; manually creating separate chats is optional where subagent tools are available. If independence is unavailable, the agent must disclose self-review.
 
+The designer brings independent judgment before execution, whether the responsibility belongs to the main agent or a subagent. It assesses the current experience and visual direction, identifies the outcome behind a change request, and presents a recommendation with useful alternatives before implementing an unsettled direction. It may challenge the requested solution or recommend keeping the existing design. Exploration stays proportionate: a brief recommendation can suffice for a small adjustment; substantial changes may warrant mockups or isolated prototypes. It refines proposals with your feedback and implements the approved scope only when authorized, without manufacturing options or repeatedly seeking approval for settled choices. See the [designer brief](skills/manage-ai-assisted-projects/references/agent-assignments.md#designer-brief).
+
 ### Critique a consequential proposal
 
 Example prompt:

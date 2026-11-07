@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Make independent assessment and proactive recommendations explicit designer responsibilities before implementing an unsettled direction; refine proposals with user feedback and preserve design/implementation authority boundaries.
+- Allow recommendations to retain the current design, scale exploration to the decision, and avoid manufactured alternatives or repeated approval for already authorized choices.
+- Carry the design sequence through the skill entry point, README, increment template, and subagent contract. Existing adopted project agreements remain unchanged until an explicit migration assessment.
+
 ## 0.3.1 — 2026-11-04
 
 - Label everyday-work quotations as optional example prompts to copy or adapt, rather than steps users must repeat.
