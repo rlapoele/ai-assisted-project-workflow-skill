@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.4.0 — 2026-11-07
 
 - Make independent assessment and proactive recommendations explicit designer responsibilities before implementing an unsettled direction; refine proposals with user feedback and preserve design/implementation authority boundaries.
 - Allow recommendations to retain the current design, scale exploration to the decision, and avoid manufactured alternatives or repeated approval for already authorized choices.
