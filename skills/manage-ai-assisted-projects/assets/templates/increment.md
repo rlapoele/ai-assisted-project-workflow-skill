@@ -31,7 +31,9 @@
 
 ## Verification and review
 
-[Criterion-linked checks; baseline/snapshot; independent critique/review if warranted.]
+[Product stage, intended workload, concrete risks, and actual guarantees; defensive ceilings do not imply performance at all maxima. Distinguish essential functional acceptance, relevant integrity/security checks, representative performance, and optional stress/compatibility/future hardening. Preserve existing agreed gates.]
+
+[Criterion-linked checks; baseline/snapshot; independent critique/review if warranted. Before substantial verification, record one concise aggregate time/repair-cycle budget and stopping conditions. For small increments without a specified budget, start with 30 minutes and at most two harness-repair cycles; briefly assess suitability and adjust before starting within authority. Include all agents, review, diagnostics, harness repair, run waits and reruns; overlapping agent time counts per agent. Track used/remaining allowance here through handoffs/resumes without resets. Stop at either limit or earlier for low value/tooling dominance; further qualification is a separately authorized bounded follow-up.]
 
 ## Amendments and findings
 

@@ -22,6 +22,8 @@ Update after material milestones, decisions, limitations, or handoffs. Preserve 
 
 Date consequential decisions and checks; identify scope, snapshots, and confidence. Maintain uncertainty labels across summaries. One concise owning entry is better than repeated warnings across records.
 
+For substantial verification, the active task/increment owns the shared budget and cumulative time/repair cycles consumed across agents, diagnostics and reruns. Status links to its remaining allowance and stopping reason. A resume, new snapshot, or corrected harness must not reset those totals or restart stopped qualification without an explicitly authorized bounded follow-up.
+
 Design/experiment revisions need durable identity: label plus commit/artifact reference and approval scope. An evolving path alone does not identify the agreed proposal. Distinguish observed, proposed, and required behavior.
 
 ## Decisions and assumptions

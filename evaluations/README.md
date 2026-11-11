@@ -2,6 +2,8 @@
 
 These exercises evaluate an agent using the skill, not the presence of particular wording in Markdown. They complement installer tests. Use disposable directories outside this repository, synthetic data only, no network, and no real credentials. Fixture Git initialization is local; the harness never stages, commits, pushes, or creates a remote.
 
+Select scenarios affected by the change under the skill's [shared verification budget](../skills/manage-ai-assisted-projects/SKILL.md#proportionate-verification); this catalog is not a mandatory full campaign. Include evaluator/reviewer effort, diagnostics, harness repairs and reruns in that budget. Stop affected evaluation at its stopping point and report gaps, even if another run might add evidence. A new case or evaluator does not reset consumed effort. Documentation-only review of examples is self-evaluation, not an independent behavioral run; installer/checker tests do not establish agent judgment.
+
 ## Prepare
 
 From the repository root, choose a fresh temporary path:

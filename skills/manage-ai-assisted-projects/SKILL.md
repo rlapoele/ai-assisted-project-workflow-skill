@@ -36,9 +36,30 @@ Before handing changes back for human `git add`, `git commit`, and optional `git
 2. For substantial work, record outcome, scope/exclusions, observable criterion IDs, constraints, material assumptions/questions, verification approach, and current stage. Small corrections can use a concise task description instead.
 3. Challenge consequential premises before dependent work. Use independent critique when warranted and authorized; otherwise disclose self-critique and seek human resolution of material uncertainty.
 4. Record agreement and implementation authority faithfully. One user instruction may provide both; do not invent approval ceremonies. Routine choices proceed autonomously within scope. Material changes need explicit resolution and an amendment.
-5. Implement and verify observable behavior. For delegated work, supply and check a subagent contract; preserve uncertainty labels in handoffs.
+5. Implement and verify observable behavior using [proportionate verification](#proportionate-verification). For delegated work, supply and check a subagent contract; preserve uncertainty labels and the shared remaining verification budget in handoffs.
 6. Review against authoritative requirements and an identified stable snapshot. Use independent review when assigned; report self-review honestly when independence is unavailable.
 7. Complete with criterion-linked evidence, finding dispositions, limits, and next authorized action or proposed follow-up. Update curated memory after material changes, not every tool call.
+
+## Proportionate verification
+
+Choose checks for the current product stage, intended workload, and concrete risks. In the existing task/increment record or a brief inline plan, distinguish:
+
+- Essential functional acceptance: agreed user behavior and relevant failure paths.
+- Data-integrity and security checks: risks introduced or affected by this change, using synthetic data or isolated copies to protect user data.
+- Representative performance: realistic workloads, relevant environments, and the performance guarantees actually agreed.
+- Optional qualification: defensive stress, combinations of maxima, exhaustive compatibility, and future production hardening. These are not delivery gates unless explicitly agreed.
+
+Defensive input ceilings bound accepted data; they do not establish interactive-performance guarantees at every maximum or combination of maxima. State the agreed guarantees and scope. Preserve any existing stronger acceptance requirement; if it cannot be verified within budget, report it unverified rather than silently weakening it or claiming completion.
+
+Before substantial verification, the coordinator (or sole agent) records a concise shared budget, essential checks, optional exclusions, and stopping conditions. For a small increment with no specified budget, start with **30 minutes of aggregate verification wall time and at most two harness-repair cycles**, stopping at whichever limit is reached first. This is a ceiling, not a target. Assess suitability in a sentence: use less for a documentation change; allow more before starting when concrete integrity/security risk, agreed workloads, or known check duration justifies it within existing authority. Do not turn budget selection into a separate document or approval ceremony.
+
+Count elapsed time spent on verification/review across all agents, including diagnostics, harness repair, waiting for test runs, and reruns; overlapping agent time counts for each agent. A repair cycle is one bounded attempt to repair a harness problem and recheck it, not each edited line. Track cumulative time and cycles approximately in the owning record; carry used/remaining amounts across handoffs and resumes. Changing agent, snapshot, harness, or diagnostic name never resets the budget. Ordinary implementation and genuine product-defect correction continue within authority, but must not disguise harness/diagnostic work or reset subsequent verification allowance.
+
+After a failure and before another handoff or rerun, reassess the decision it could change, expected user value, likely attribution, cheapest useful check, and remaining budget. New evidence alone does not justify another iteration. Continue only when that value warrants the cost. Stop the affected verification when either limit is reached, tooling dominates useful product evidence, or another run has little expected value. Preserve useful results, return completed work, label failed/unverified criteria and delivery limits, and propose any further qualification separately. Do not restart automatically through another agent, renamed diagnostic, or repeated budget extension; resumption after a stop needs an explicitly authorized bounded follow-up. Continue unaffected authorized implementation and defect correction without repeatedly asking permission.
+
+Distinguish product failures from harness failures before changing application code for automation or timing errors. Seek reasonable attribution through the smallest relevant reproduction, trace, or comparison within the same budget; otherwise report the cause as unresolved. Do not change product behavior merely to satisfy an unreliable selector, injected conversion, or automation timeout. Prefer a labelled manual check or deferred qualification when building or repairing automation is disproportionate. State exactly what manual evidence covers; it cannot silently replace a specifically agreed automated criterion.
+
+Classify findings as demonstrated defects, unresolved requirements, optional improvements, or future hardening. For a blocking finding, state the current criterion or concrete data/security risk, scenario, evidence, and consequence that prevents this delivery. An unresolved requirement is a gap to resolve, not a demonstrated defect. Use targeted rechecks of affected behavior; repeat the full suite only for a concrete regression risk or an agreed gate. Preserve stable review targets and use independent review where its value justifies its cost. Minor harness edits do not automatically need another independent approval; identify any effect on evidence validity and recheck that scope. Budget exhaustion never makes a failed or unverified requirement pass.
 
 ## Assumption check at every boundary
 

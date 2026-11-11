@@ -72,6 +72,7 @@ Establish explicitly:
 - Human resolution of substantive product/architecture ambiguity, informed by evidence.
 - A contract for every delegation, and coordinator inspection of returned uncertainty.
 - How independent critique/review is assigned; disclose unavailable independence.
+- Proportionate verification categories, agreed workload/performance guarantees, and a coordinator-owned cumulative budget/stopping rule carried across handoffs. Copy the applicable guidance from the AGENTS and increment templates; use existing records, not a new budget document. Preserve stronger existing agreements and surface conflicts during upgrades.
 - What proceeds autonomously and what dependent work waits for clarification.
 
 ## Verification and handoff

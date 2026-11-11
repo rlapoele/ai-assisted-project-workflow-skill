@@ -28,6 +28,8 @@ Use only necessary, authorized context; preserve private/ignored boundaries and 
 
 [Surface material uncertainty and consequences through coordinator before dependent work; continue unaffected authorized work. Don't invent defaults or workarounds. End unproductive critique loops with concrete options, not agent votes.]
 
+[For verification/review, reference the coordinator's shared budget, consumed/remaining time and repair cycles, and this assignment's allowance. Include diagnostics, harness repair and reruns; agent/snapshot/harness changes do not reset totals. Stop at the allowance or earlier when tooling dominates/expected value is low; new evidence alone does not justify another iteration. Return gaps and useful results without launching replacement runs or agents.]
+
 ## Required return
 
 - Artifacts/results and evidence.
@@ -35,6 +37,7 @@ Use only necessary, authorized context; preserve private/ignored boundaries and 
 - Findings: scenario, consequence, criterion/rule, severity where appropriate.
 - Assumptions introduced/relied upon, basis/status; none identified if applicable.
 - Unresolved questions, blocked dependent work, verification gaps.
+- For verification/review: elapsed effort, harness-repair cycles used, stopping reason, attribution of product versus tooling failures (including uncertainty), and targeted recheck needs; distinguish current delivery blockers from optional improvements/future hardening.
 - Authorized changes and next proposed action; no claim of another role's approval.
 
 ## Coordinator acceptance

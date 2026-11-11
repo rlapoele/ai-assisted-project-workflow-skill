@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Bound verification by product stage, intended workloads, concrete risks, and actual agreed guarantees; separate essential acceptance/integrity/security, representative performance, and optional qualification. Defensive input ceilings alone do not establish maximum-load performance guarantees.
+- Make the coordinator own a cumulative verification budget across agents, reviews, diagnostics, harness repairs, and reruns. Start small increments without a specified budget at 30 aggregate minutes and at most two harness-repair cycles, assessing suitability before work; stop earlier for low value or tooling dominance and do not automatically renew stopped loops.
+- Require reasonable product/tool failure attribution, actionable finding categories and current blocking rationale, targeted rechecks, and honest unverified criteria at handoff. Carry budgets and stopping decisions through role briefs, adoption, memory, and existing templates without adding review layers.
+- Preserve current project agreements and human Git control. Copied project guidance needs a separate migration assessment; installed copies and application projects are not changed by this amendment.
+
 ## 0.4.0 — 2026-11-07
 
 - Make independent assessment and proactive recommendations explicit designer responsibilities before implementing an unsettled direction; refine proposals with user feedback and preserve design/implementation authority boundaries.

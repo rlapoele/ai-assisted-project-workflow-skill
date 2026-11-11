@@ -9,6 +9,7 @@ The repository name is `ai-assisted-project-workflow-skill`; the installed skill
 - Adoption steps that initialize local Git when absent and preserve existing repository conventions and work.
 - Document ownership, compact handoffs, decision records, and resume instructions that work across chats.
 - Increment contracts, acceptance evidence, completion reports, and explicit assumption checks.
+- Coordinator-owned verification budgets and stopping rules that survive agent handoffs, diagnostics, and reruns.
 - Optional analyst, designer, developer/architect, and reviewer/QA role briefs.
 - An independent critique assignment for consequential proposals.
 - Subagent contracts defining authoritative inputs, scope, authority, deliverables, verification, uncertainty, and escalation.
@@ -175,7 +176,7 @@ Example prompt:
 
 Example prompt:
 
-> Implement the agreed increment using our adopted workflow. Continue routine work within scope, verify acceptance criteria, and complete the evidence report. Bring material ambiguities and necessary scope changes back to me.
+> Implement the agreed increment using our adopted workflow. Continue routine work within scope, establish proportionate verification and a shared budget before substantial checks, and complete the evidence report. Stop affected verification at its stopping point and return honest gaps with useful completed work. Bring material ambiguities and necessary scope changes back to me.
 
 ### Optional contracted subagents
 
@@ -195,6 +196,19 @@ Example prompt:
 
 The coordinator checks every returned assignment, including assumptions introduced or relied upon, unresolved questions, and verification gaps. Material uncertainty pauses dependent work; unaffected authorized work continues. Agent consensus is not evidence.
 
+### Keep verification bounded
+
+The [verification guidance](skills/manage-ai-assisted-projects/SKILL.md#proportionate-verification) separates essential acceptance and relevant integrity/security checks from representative performance and optional stress, compatibility, or future hardening. Input ceilings alone do not promise interactive performance at all maxima. Existing stronger agreements remain in force.
+
+Before substantial verification, record one short budget in the existing task/increment. For a small increment without a specified budget, 30 aggregate verification minutes and at most two harness-repair cycles are starting limits, not effort targets. Briefly adjust before starting for concrete risk and scope; documentation usually needs much less. Count all agents' review, diagnostics, harness repairs, run waits and reruns; overlapping agent time counts separately. The coordinator retains the totals across handoffs and resumes. Stop at either limit or earlier when tooling dominates or expected value is low, even if another run could produce new evidence. Return useful completed work and unmet criteria; further qualification after stopping needs an explicitly authorized bounded follow-up.
+
+Examples of applying the rule:
+
+- A small backup feature passes its essential save/restore and integrity checks on representative data. Its defensive file-size ceiling does not, by itself, require a browser stress test at maximum size across maximum project counts. Report that performance qualification as deferred, unless it is an agreed gate; an agreed but untested gate remains unverified.
+- After two harness-repair cycles, an upload automation failure remains unattributed. A reviewer proposes a corrected file-conversion diagnostic that might yield new evidence. The coordinator stops the affected qualification and preserves the passing checks and unresolved failure. Previously collected manual evidence may support a narrower, labelled claim; a fresh manual qualification after stopping is a proposed follow-up, not a workaround. Neither a new reviewer nor a renamed diagnostic renews the budget. A verified product defect can still be corrected within scope; if its recheck is stopped or has no allowance left, it remains unverified pending a separately authorized follow-up.
+
+To align an existing project later, inspect its copied `AGENTS.md` guidance, collaboration/role briefs, increment and subagent-contract templates, completion reports, and current handoff. Make targeted compatible changes, preserve approved acceptance/review agreements, and surface conflicts rather than silently removing gates. Carry existing verification consumption and stop decisions forward. Updating an installation alone does not migrate those records; this repository amendment does not edit application projects.
+
 ## Documents and memory
 
 See the [skill entry point](skills/manage-ai-assisted-projects/SKILL.md), [adoption procedure](skills/manage-ai-assisted-projects/references/adoption.md), [curated memory guidance](skills/manage-ai-assisted-projects/references/project-memory.md), [role and critique briefs](skills/manage-ai-assisted-projects/references/agent-assignments.md), and [templates](skills/manage-ai-assisted-projects/assets/templates/).
@@ -213,7 +227,7 @@ Keep the project checkout on `dev` for normal Codex work. The local repository r
 
 1. Edit the tracked skill source and affected documentation together.
 2. Update VERSION and the changelog for a versioned change. Use patch for corrections, minor for compatible additions, and major for breaking changes to the adopted workflow or migration expectations. Before 1.0, document incompatible changes explicitly rather than relying on a version number alone.
-3. Run the checks below. For meaningful workflow changes, run the [behavioral evaluations](evaluations/README.md) on disposable new/existing projects, including repeat adoption, and use independent critique when useful. Keep behavioral results separate from installer/checker tests.
+3. Run checks proportionate to the change under a shared budget. For meaningful workflow changes, select affected [behavioral evaluations](evaluations/README.md); new/existing/repeat-adoption runs are useful when adoption changes. Use independent critique when its value justifies the cost and delegation is authorized. Do not launch a full evaluation campaign by default. Keep behavioral results separate from installer/checker tests.
 4. Hand off a focused change with verification results and a suggested commit message; leave staging and committing to the human reviewer. Tag, publish, push, or create releases only when requested. No remote hosting or license is selected by this local setup.
 5. Re-run the installer to update a copied installation; existing adopted projects need a separate, explicit migration assessment. A development link already follows source changes.
 

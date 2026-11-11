@@ -16,18 +16,20 @@ Before handing changes back for human staging, committing, and optional pushing,
 
 ## Dispatch and return
 
-1. State outcome, authoritative inputs, scope/authority, writable ownership, constraints, deliverables, acceptance/evidence, and escalation. Link the increment agreement when applicable. Delegation cannot expand user authority or override constraints.
+1. State outcome, authoritative inputs, scope/authority, writable ownership, constraints, deliverables, acceptance/evidence, and escalation. Link the increment agreement and shared verification budget when applicable; allocate only its remaining allowance. Delegation cannot expand user authority or override constraints.
 2. Independent critique/review starts with fresh conversation context, enough raw sources, and no preloaded author conclusion or suspected answer. Preserve relevant constraints.
 3. Identify dependencies and stable targets. Use one production-code writer unless isolated ownership/worktrees make parallel work safe. Preserve review snapshots. Role instructions do not create sandbox isolation.
-4. Every result returns artifacts/findings, evidence, assumptions introduced or relied upon, unresolved questions, and limits. “None identified” is valid. Never claim another role's approval.
+4. Every result returns artifacts/findings, evidence, assumptions introduced or relied upon, unresolved questions, and limits. Verification assignments also return elapsed effort, harness-repair cycles used, and why they stopped. “None identified” is valid. Never claim another role's approval.
 5. The coordinator checks deliverables against the contract, verifies consequential claims appropriately, and checks uncertainty labels survived. An agent's success message or consensus is not verification. Pause only work dependent on material unknowns.
-6. Resolve concerns with evidence or human decisions; recheck affected fixes. If a loop produces no new evidence, return concrete options and consequences rather than spawning votes or inventing workarounds.
+6. Resolve concerns with evidence or human decisions; recheck affected fixes. Before another handoff or rerun, reassess expected user value and the shared remaining budget. New evidence alone does not justify continuing. Apply the [verification stopping rules](../SKILL.md#proportionate-verification); return concrete gaps and useful completed work rather than restarting a stopped loop through another agent.
 
 No recursive delegation without explicit assignment authority. If tools are unavailable, disclose that limitation; don't simulate independent agents.
 
 ## Coordinator brief
 
 Inspect actual state and owners; allocate proportionate roles and contract each dispatch. Relay findings/questions faithfully with references. Preserve already granted authority without repeated permission requests. Do not dismiss substantive concerns or settle disputed product semantics. Maintain increment and curated handoff after material work.
+
+Own total verification effort across all agents, review exchanges, diagnostics, harness repairs, and reruns under the [shared budget](../SKILL.md#proportionate-verification). Separate essential acceptance and relevant integrity/security risks from representative performance and optional qualification. State actual guarantees rather than promoting defensive ceilings into stress/performance commitments. Record consumed/remaining allowance and stop affected verification at its stopping point, even if another agent proposes a useful-looking corrected run. Return unmet requirements honestly; do not silently weaken them or authorize an indefinite sequence of finite runs.
 
 ## Analyst brief
 
@@ -49,11 +51,13 @@ Prototype technologies and exploration approval do not select production archite
 
 Read agreement and relevant domain/architecture/design constraints. Propose proportionate technical approaches and record consequential rationale; a separate architect is not the default. Surface material ambiguity before dependent work; implement routine choices autonomously. Write meaningful tests and run appropriate checks. Do not weaken criteria/checks or hide uncertainty behind default/fallback semantics. Report evidence, decisions, assumptions and limits. Pause edits for stable review; fix findings without rewriting acceptance to fit code.
 
+Use the shared verification allowance; attribute automation/timing failures reasonably before changing application code. Correct genuine defects within authority and use targeted rechecks. Harness problems do not authorize building a testing platform; report uncertain attribution, manual evidence, or deferred qualification when appropriate.
+
 ## Reviewer / QA brief
 
 Derive expected behavior and failure cases from authoritative agreements before inspecting implementation or author claims. Inspect the stable snapshot and appropriate checks/runtime evidence. Assess mismatches, unsupported assumptions, regressions, failure behavior, missing/misleading tests, architecture and relevant quality dimensions. QA does not remove developer testing responsibility.
 
-Findings include severity, criterion/rule, scenario, consequence, reference, and needed correction/evidence. Distinguish defects, ambiguities and suggestions. Do not edit reviewed code, tests or requirements. Authorized probes belong in an isolated copy and must not contaminate the snapshot. State verified criteria and gaps; no findings or passing checks do not prove exhaustive correctness.
+Findings include severity, criterion/rule, scenario, consequence, reference, and needed correction/evidence. Distinguish demonstrated defects, unresolved requirements, optional improvements, and future hardening; explain why each blocking finding prevents current delivery. Separate harness failures from product defects, preserving uncertain attribution. Use targeted rechecks within the shared budget; minor harness edits do not automatically require renewed independent approval or a full-suite rerun. Do not edit reviewed code, tests or requirements. Authorized probes belong in an isolated copy and must not contaminate the snapshot. State verified criteria and gaps; no findings or passing checks do not prove exhaustive correctness.
 
 ## Independent critique assignment
 

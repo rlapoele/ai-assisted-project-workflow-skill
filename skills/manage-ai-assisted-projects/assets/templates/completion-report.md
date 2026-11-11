@@ -15,6 +15,8 @@
 
 [Commands/outcomes; independent or self-review; findings, dispositions, rechecks and unverified areas. Include user-learning observations when relevant.]
 
+[For substantial verification: cumulative time/repair cycles used versus budget across agents and reruns, stopping reason, product/tool attribution and its limits, targeted rechecks, and manual evidence versus deferred qualification. Classify demonstrated defects, unresolved requirements, optional improvements and future hardening; explain current delivery blockers. Failed/unverified agreed criteria remain so even at budget exhaustion.]
+
 ### Assumptions and decisions
 
 [Assumptions relied upon/introduced, their evidence/agreement, unresolved material questions and owning decisions; none identified if applicable.]
