@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.5.0 — 2026-11-11
 
 - Bound verification by product stage, intended workloads, concrete risks, and actual agreed guarantees; separate essential acceptance/integrity/security, representative performance, and optional qualification. Defensive input ceilings alone do not establish maximum-load performance guarantees.
 - Make the coordinator own a cumulative verification budget across agents, reviews, diagnostics, harness repairs, and reruns. Start small increments without a specified budget at 30 aggregate minutes and at most two harness-repair cycles, assessing suitability before work; stop earlier for low value or tooling dominance and do not automatically renew stopped loops.
